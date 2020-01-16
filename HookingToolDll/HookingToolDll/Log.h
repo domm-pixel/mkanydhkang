@@ -1,6 +1,6 @@
 #pragma once
 
-extern LPCWSTR szModuleTag; //¾îÇÃ¸®ÄÉÀÌ¼Ç¿¡¼­ °³º°ÀûÀ¸·Î ÇØ´ç ÅÂ±× ³»¿ëÀ» Á¤ÀÇ ÇÏ±âÀ§ÇØ extern
+extern LPCWSTR szModuleTag; //ì–´í”Œë¦¬ì¼€ì´ì…˜ì—ì„œ ê°œë³„ì ìœ¼ë¡œ í•´ë‹¹ íƒœê·¸ ë‚´ìš©ì„ ì •ì˜ í•˜ê¸°ìœ„í•´ extern
 extern BOOL g_bDebugOut;
 
 #define IS_BIT_SET(bFlag,b) (((bFlag)&(b))==(bFlag))
@@ -26,12 +26,12 @@ extern BOOL g_bDebugOut;
 						else OutputDebugStringW( L">>> dbg_format failure");	\
 				} \
 		}
-#define MYDEBUG(fmt, ...)		{ if(g_bDebugOut) LogW(fmt, __VA_ARGS__) }		// debug º¸´Ù »ó¼¼ÇÑ Á¤º¸¸¦ Ç¥½ÃÇÏ´Â ¸Ş½ÃÁö
+#define MYDEBUG(fmt, ...)		{ if(g_bDebugOut) LogW(fmt, __VA_ARGS__) }		// debug ë³´ë‹¤ ìƒì„¸í•œ ì •ë³´ë¥¼ í‘œì‹œí•˜ëŠ” ë©”ì‹œì§€
 //////////////////////////////////////////////////////////////////////////////
 
 //  void LOG(const WCHAR *format, ...)
 //{
-////try - catch ·Î ¿¹¿ÜÃ³¸®¸¦ ÇÏ´Â °ÍÀÌ ÁÁÀ½...!
+////try - catch ë¡œ ì˜ˆì™¸ì²˜ë¦¬ë¥¼ í•˜ëŠ” ê²ƒì´ ì¢‹ìŒ...!
 //	USES_CONVERSION;
 //	if (check_Bit() == 0)
 //		return;
@@ -46,7 +46,7 @@ extern BOOL g_bDebugOut;
 //			_vsnwprintf_s(buf, sizeof(buf), format, vaList);
 //			va_end(vaList);
 //
-//			OutputDebugStringW(buf);    // µû·Î »©¼­ ÇÔ¼ö·Î ¸¸µå´Â°Ô ±ò²ûÇÒµí.
+//			OutputDebugStringW(buf);    // ë”°ë¡œ ë¹¼ì„œ í•¨ìˆ˜ë¡œ ë§Œë“œëŠ”ê²Œ ê¹”ë”í• ë“¯
 //			return;
 //		}
 //		catch (int exceptionCode)
